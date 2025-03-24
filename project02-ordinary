@@ -1,0 +1,15 @@
+void ordinary()
+{
+    long long int begin, end, freq;
+    QueryPerformanceFrequency((LARGE_INTEGER *) &freq);
+    QueryPerformanceCounter((LARGE_INTEGER*) &begin);
+    for(int l=0;l<LOOP;l++)
+    {
+        // init();
+        ull sum = 0;
+        for (int i = 0; i < N; i++)
+            sum += a[i];
+    }
+    QueryPerformanceCounter((LARGE_INTEGER*) &end);
+    cout<<"ordinary:"<<(end-begin)*1000.0/freq/LOOP<<"ms"<<endl;
+}
