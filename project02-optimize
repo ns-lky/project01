@@ -1,0 +1,15 @@
+void optimize()
+{
+    long long int begin, end, freq;
+    QueryPerformanceFrequency((LARGE_INTEGER *) &freq);
+    QueryPerformanceCounter((LARGE_INTEGER*) &begin);
+    for(int l=0;l<LOOP;l++)
+    {
+        ull sum1 = 0, sum2 = 0;
+        for(int i=0;i<N-1; i+=2)
+            sum1+=a[i],sum2+= a[i+1];
+        ull sum = sum1 + sum2;
+    }
+    QueryPerformanceCounter((LARGE_INTEGER*) &end);
+    cout<<"optimize:"<<(end-begin)*1000.0/freq/LOOP<<"ms"<<endl;
+}
